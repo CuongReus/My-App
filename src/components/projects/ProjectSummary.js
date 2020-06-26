@@ -1,12 +1,15 @@
 import React from "react";
+import moment from 'moment'
 
-const ProjectSummary = () => {
+const ProjectSummary = ({project}) => {
   return (
     <div className="card z-depth-0 project-summary">
       <div className="card-content grey-text text-darken-3">
-        <span className="card-title">Project Title</span>
-        <p>Post by TriCuong</p>
-        <p className="grey-text">3rd September, 2am</p>
+        <span className="card-title">{project.title}</span>
+        <p>Post by {project.authorFirstName} {project.authorLastName}</p>
+        <p className="grey-text">{project.createdAt
+            ? moment(project.createdAt.toDate()).calendar()
+            : "26nd June, 2020"}</p>
       </div>
     </div>
   );

@@ -5,9 +5,29 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url(/public/images/galaxy.jpg) no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  background-color: gray;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+form{
+  padding: 20px;
+  margin-top: 60px;
+}
+.input-field label {
+  position: relative;
+  font-weight: bold;
+  color: #1f1c1ed1;
+}
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]){
+  border-color:red;
+  box-shadow: none;
 }
